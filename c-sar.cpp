@@ -4,42 +4,48 @@ using namespace std;
 
 class Cesar
 {
+	string alfabeto="abcdefghijklmnopqrstuvwxyz";
 	int clave;
 public:
 	Cesar(int clavecita){
 		clave=clavecita;
 		cout<<"la clave es: "<<clave;
 	}
-		
-	string alfabeto="abcdefghijklmnopqrstuvwxyz";
 	
 	string cifrar(string mensaje){
-		for(int i=0;i<mensaje.length();i++){
+		string mensenc;
+		for(int i=0;i<mensaje.size();i++){
 			int posicion=alfabeto.find(mensaje[i]);
-			int n=posicion+clave;
-			mensaje += alfabeto[posicion];
+			posicion+=clave;
+			if(posicion>=alfabeto.size()){
+				posicion-=clave;
+			}
+			mensenc+= alfabeto[posicion];
 		}
-		
-		return mensaje;
+		return mensenc;
 	}
 	
 	string descifrar(string mensaje){
+		string mensdes;
 		for(int j=0;j<mensaje.length();j++){
-			int descifrapos=alfabeto.find(mensaje[j])-clave;
-			int n=descifrapos-clave;
+			int posicion2=alfabeto.find(mensaje[j])-clave;
+			if(posicion2<0){
+				posicion2+=clave;
+			}
+			mensdes+=alfabeto[posicion2];
 		}
-		return mensaje;
+			
+		return mensdes;
 	}
 };
 
 
 
 int main(int argc, char *argv[]) {
-	string mensaje="ella no te ama";
+	string mensaje="hola";
 	int clave=3;
 	Cesar prueba(clave);
 	string cif=prueba.cifrar(mensaje);
-	cout<<cif;
+	cout<<cif<<endl;
 	return 0;
 }
-
