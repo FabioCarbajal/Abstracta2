@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1527964154 source:c:\users\fabio\desktop\rsa\main.cpp
+	<vector>
+	<stdlib.h>
+	<time.h>
+	<NTL/ZZ.h>
+	<sstream>
+	<string>
+	<fstream>
+
+1538198671 source:c:\users\fabio\desktop\semestre i-2018\algebra abstracta\rsa\main.cpp
+	<vector>
+	<stdlib.h>
+	<time.h>
+	<NTL/ZZ.h>
+	<sstream>
+	<string>
+	<fstream>
+
