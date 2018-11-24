@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1543042209 source:c:\ntl\gamal2\main.cpp
+	<iostream>
+	<fstream>
+	"Gamal.h"
+
+1543041755 c:\ntl\gamal2\include\gamal.h
+	<string>
+	"Funciones.h"
+	<fstream>
+
+1543042088 c:\ntl\gamal2\include\funciones.h
+	<iostream>
+	<string>
+	<vector>
+	<stdlib.h>
+	<time.h>
+	<NTL/ZZ.h>
+	<sstream>
+
+1543042108 source:c:\ntl\gamal2\src\funciones.cpp
+	"Funciones.h"
+
+1543043220 source:c:\ntl\gamal2\src\gamal.cpp
+	"Gamal.h"
+
